@@ -36,22 +36,27 @@ function isSunday(year){
 */
 
   for (let i = firstYear; i <= lastYear; i++ ){
-    // console.log('initial', i, weekDayName[weekDay])
     
-    if(weekDay === 0) {
-      console.log(`${i} begins with a Sunday`)
+    function incrementDay() {
+      weekDay++
+      if(weekDay == 7){
+        weekDay = 0
+      }
+    }
+
+    function checkSunday(){
+      if(weekDay === 0) {
+        console.log(`${i} begins with a Sunday`)
+      }
     }
     
     if (leapYear(i)) {
-      weekDay += 2
-      if(weekDay >= 6){
-        weekDay = 0
-      }
+      checkSunday()
+      incrementDay()
+      incrementDay()
     } else {
-      weekDay++
-      if(weekDay >= 6){
-        weekDay = 0
-      }
+      checkSunday()
+      incrementDay()
     }
 
     // console.log('last', weekDay)
