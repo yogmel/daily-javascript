@@ -4,19 +4,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+
+  <style>
+    .exercise__container {
+      display: none;
+    }
+
+    .exercise__container.active {
+      display: block;
+    }
+  </style>
 </head>
 <body>
   
-  <!-- <div>
+  <nav id="navBtn">
+    <button id="showEx5">Exercise 05</button>
+    <button id="showEx7">Exercise 07</button>
+    <button id="showEx8">Exercise 08</button>
+    <button id="showEx9">Exercise 09</button>
+  </nav>
+
+  <div id="exercise5" class="exercise__container">
     <h1>Escolhi um número entre 1 a 10</h1>
     <form action="#" id="formNum">
       <input type="number" id="inputUser">
       <input type="submit">
     </form>
     <p id="feedbackMessage"></p>
-  </div> -->
+  </div>
 
-  <!-- <div>
+  <div id="exercise7" class="exercise__container">
     <form>
       <div>
         <span>1st Number</span> <input type="text" id="inputOne">
@@ -35,19 +52,17 @@
       <p>The result is:</p>
       <p id="result"></p>
     </div>
-  </div> -->
+  </div>
 
-  <!-- <div>
+  <div id="exercise8" class="exercise__container">
     <form id="temperatureForm">
-
       <input type="text" id="inputFahrenheit"> ºF
       <input type="text" id="inputCelsius"> ºC
-
       <p id="warning"></p>
     </form>
-  </div> -->
+  </div>
 
-  <div>
+  <div id="exercise9" class="exercise__container">
     <form id="userForm">
       <input type="text" name="userVariable" id="userVariable">
       <input type="submit" value="Set Variable">
@@ -56,21 +71,21 @@
     </form>
   </div>
 
-<script src="01_currentDate.js"></script>
-<script src="02_triangleArea.js"></script>
-<script src="03_rotateString.js"></script>
-<script src="04_gregorianCalendar.js"></script> 
-<script src="05_randomNum.js"></script> 
-<script src="06_daysToChristmas.js"></script> 
-<script src="07_multiplyDivide.js"></script> 
-<script src="08_celsiusFahrenheit.js"></script>
-<script src="09_userDefined.js"></script>
+  <script src="script.js"></script>
+  <script src="01_currentDate.js"></script>
+  <script src="02_triangleArea.js"></script>
+  <script src="03_rotateString.js"></script>
+  <script src="04_gregorianCalendar.js"></script> 
+  <script src="05_randomNum.js"></script> 
+  <script src="06_daysToChristmas.js"></script> 
+  <script src="07_multiplyDivide.js"></script> 
+  <script src="08_celsiusFahrenheit.js"></script>
+  <script src="09_userDefined.js"></script>
 
-
-<script>
-  console.log(window.location.href)
-  console.log(document.URL)
-</script>
+  <script>
+    console.log(window.location.href)
+    console.log(document.URL)
+  </script>
 
 </body>
 </html>
