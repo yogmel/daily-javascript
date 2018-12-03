@@ -1,17 +1,19 @@
+const leapYearContainer = document.getElementById('exercise4')
+
 function leapYear(year) {
   if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) {
-    // console.log(`${year} is a leap year`)
     return true
   }
-  
-  // console.log(`${year} is not a leap year`)
   return false
 }
 
-console.log(leapYear(2018))
-console.log(leapYear(2017))
-console.log(leapYear(2016))
-console.log(leapYear(1900))
+leapYearContainer.innerHTML = `
+<h2>Leap Year</h2>
+<p> Is 2018 a Leap Year? ${leapYear(2018)} </p>
+<p> Is 2017 a Leap Year? ${leapYear(2017)} </p>
+<p> Is 2016 a Leap Year? ${leapYear(2016)} </p>
+<p> Is 1900 a Leap Year? ${leapYear(1900)} </p>
+`
 
 function isSunday(year){
   const firstYear = 2014
@@ -35,6 +37,8 @@ function isSunday(year){
 2045
 */
 
+leapYearContainer.innerHTML += `<h2>Does the year begin with a Sunday?</h2>`
+
   for (let i = firstYear; i <= lastYear; i++ ){
     
     function incrementDay() {
@@ -46,10 +50,11 @@ function isSunday(year){
 
     function checkSunday(){
       if(weekDay === 0) {
-        console.log(`${i} begins with a Sunday`)
+        leapYearContainer.innerHTML += `
+        <p>${i} begins with a Sunday</p>
+        `
       }
     }
-    
     if (leapYear(i)) {
       checkSunday()
       incrementDay()
@@ -58,8 +63,6 @@ function isSunday(year){
       checkSunday()
       incrementDay()
     }
-
-    // console.log('last', weekDay)
     
   }
 }

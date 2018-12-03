@@ -3,6 +3,8 @@ show current date as the following form
 dd-mm-yyyy
 */
 
+const displayDateContainer = document.getElementById('exercise1')
+
 /* get current date - day, month and year and store in a variable */
 const currentDate = new Date()
 let currentDay = currentDate.getDate()
@@ -20,4 +22,4 @@ if (currentMonth.toString().length < 2) {
 
 /* display date */
 let displayDate = `${currentDay}/${currentMonth}/${currentYear} `
-console.log(displayDate)
+displayDateContainer.innerHTML = displayDate

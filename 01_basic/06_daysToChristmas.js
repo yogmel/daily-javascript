@@ -2,6 +2,7 @@ const date = new Date ()
 const dayToday = date.getDate()
 const monthToday = date.getMonth() + 1
 const yearToday = date.getFullYear()
+const daysToChristmasContainer = document.getElementById('exercise6')
 
 var numDias = {
   trintaDias: [4, 6, 9, 11],
@@ -46,4 +47,4 @@ function howManyDaysToChristmas(dayToday, monthToday){
   }
 }
 
-console.log('Total days to Christmas: ', howManyDaysToChristmas(dayToday, monthToday))
+daysToChristmasContainer.innerHTML += howManyDaysToChristmas(dayToday, monthToday)

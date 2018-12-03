@@ -13,8 +13,9 @@ function toggleVisible(e) {
         exercise.classList.remove('active')
     }
 
-    // make only selected exercise active
-    document.getElementById('exercise' + exId).classList.toggle('active')
+    if (document.getElementById('exercise' + exId))
+      // make only selected exercise active
+      document.getElementById('exercise' + exId).classList.toggle('active')
   }
   e.stopPropagation()
 }
